@@ -1,5 +1,17 @@
 # 강준모 [201840103]
 
+
+## [05월 04일]
+> [10주차 05/04] 배운 내용 요약 <br>
+1. 생성자 함수(구별을 위해 대문자로 시작하는 이름 사용)
+- function Product(name,price){
+    this.name = name;
+    this.price = price;
+}
+2. 프로토타입 : 생성자 함수로 만든 객체는 프로타입 공간에 메소드를 지정
+※ 모든 객체가 공유 하도록 함(해당 함수를 생성자 함수로 사용했을 시)
+3. null의 값과 자료형
+※ (null을 출력한 값) = null / typeof(null) = object
 ## [04월 27일]
 > [9주차 04/27] 배운 내용 요약 <br>
 1. setInterval, setTimeout 복습(clearInterval : Interval을 종료시키는 함수)
