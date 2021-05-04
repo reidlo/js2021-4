@@ -16,7 +16,7 @@
 - 기본 자료형 숫자,문자열,boolean<br>
 ※ 기본 자료형은 객체가 아니므로 속성과 메소드를 추가할 수 없음
 - Number 객체 : 자바스크립트에서 숫자를 표현할 때 사용
-※ Number 객체의 메소드
+※ Number 객체의 메소드<br>
 1.toExponential() = 숫자를 자수 표시로 나타낸 문자열 리턴<br>
 2.toFixed() = 숫자를 고정소수점 표시로 나타낸 문자열 리턴(소수점 자릿수 자름)<br>
 3.toPrecision() = 숫자를 길이에 따라 지수 표시 또는 고정 소수점 표시로 나타낸 문자열을 리턴<br>
@@ -26,6 +26,9 @@
 3.NAN_VALUE : 숫자로 나타낼 수 없는 숫자<br>
 4.POSITIVE_INFINITY : 양의 무한대 숫자<br>
 5.NEGATIVE_INFINITY : 음의 무한대 숫자<br>
+- String 객체 : 자바스크립트에서 문자를 표한할 때 사용
+※ String 객체의 메소드<br>
+1.split() : 특정한 기호를 기반으로 문자열을 분해<br>
 ## [04월 27일]
 > [9주차 04/27] 배운 내용 요약 <br>
 1. setInterval, setTimeout 복습(clearInterval : Interval을 종료시키는 함수)
