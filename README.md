@@ -75,7 +75,7 @@ const array = new Array[-2000]<br
 }<br>
 - 예외 객체 : Exception = e / EX) e.name, e.message<br>
 - 예외 강제 발생 : throw 키워드 사용 / throw 키워드 뒤에는 문자열 또는 Error 객체 입력<br>
-※ 자세한 예외 출력은 Error 객체 사용(어떤 파일의 몇번째 줄에서 예외 발생했는지 확인가능)<br>
+※ 자세한 예외 출력은 Error 객체 사용(어떤 파일의 몇번째 줄에서 예외 발생했는지도 확인가능)<br>
 
 
 ## [05월 04일]
