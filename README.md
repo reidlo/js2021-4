@@ -15,67 +15,67 @@
 → get메소드 : 시스템 상으로 설정된 값을 가져옴 / set메소드 : 직접 값을 설정함
 6.getTime() : 유닉스 타임을 (1000x60x60x24)으로 나눈 값
 2. Array 객체
-- 기본 메소드 : 대부분 파괴적 메소드로 자기 자신을 변경
-1.pop() : 배열의 마지막 주소에 있는 값을 제거.
-2.shift() : 배열의 첫번째 주소에 있는 값을 제거 후 반환.
-3.unshift() : 배열의 첫번째 자리에 새로운 요소 추가 후 변경된 배열의 길이를 반환.
-4.push() : 배열의 마지막에 새로운 요소를 추가 후 변경된 배열의 길이를 반환
-5.concat() : 두개의 배열을 합쳐주는 함수.
-6.reverse() : 배열을 역순으로 재배치.
-7.splice() : 배열의 특정 위치에 배열 요소를 추가하거나 삭제.
-8.sort() : 배열을 정렬.
-9.join() : 배열의 모든 요소를 연결해 하나의 문자열로 만듬.
-10.slice() : 배열의 지정한 부분을 리턴
+- 기본 메소드 : 대부분 파괴적 메소드로 자기 자신을 변경<br>
+1.pop() : 배열의 마지막 주소에 있는 값을 제거.<br>
+2.shift() : 배열의 첫번째 주소에 있는 값을 제거 후 반환.<br>
+3.unshift() : 배열의 첫번째 자리에 새로운 요소 추가 후 변경된 배열의 길이를 반환.<br>
+4.push() : 배열의 마지막에 새로운 요소를 추가 후 변경된 배열의 길이를 반환<br>
+5.concat() : 두개의 배열을 합쳐주는 함수.<br>
+6.reverse() : 배열을 역순으로 재배치.<br>
+7.splice() : 배열의 특정 위치에 배열 요소를 추가하거나 삭제.<br>
+8.sort() : 배열을 정렬.<br>
+9.join() : 배열의 모든 요소를 연결해 하나의 문자열로 만듬.<br>
+10.slice() : 배열의 지정한 부분을 리턴<br>
 
 - 모질라 레퍼런스 - Array
-1.forEach() : 배열의 요소들을 하나씩 뽑아 반복
-2.map() : 콜백 함수에서 리턴하는 것들을 기반으로 새로운 배열 생성
-→ 화살표 함수 사용
-EX) let foo = [1, 30, 40, 50, 100];
-    let bar = foo.map((item, index) => {
-    return item +100;
-});
-console.log(bar); ---> [101, 130, 140, 150, 200]
-3.filter() : 콜백 함수에서 true를 리턴하는 것들을 기반으로 새로운 배열 생성
-→ 화살표 함수 사용
-EX) let foo = [1, 30, 40, 50, 100];
-    let foobar = foo.filter((item, index) => {
-    return item % 2 ==0;
-});
-console.log(foobar); ---> [30, 40, 50, 100]
+1.forEach() : 배열의 요소들을 하나씩 뽑아 반복<br>
+2.map() : 콜백 함수에서 리턴하는 것들을 기반으로 새로운 배열 생성<br>
+→ 화살표 함수 사용<br>
+EX) let foo = [1, 30, 40, 50, 100];<br>
+    let bar = foo.map((item, index) => {<br>
+    return item +100;<br>
+});<br>
+console.log(bar); ---> [101, 130, 140, 150, 200]<br>
+3.filter() : 콜백 함수에서 true를 리턴하는 것들을 기반으로 새로운 배열 생성<br>
+→ 화살표 함수 사용<br>
+EX) let foo = [1, 30, 40, 50, 100];<br>
+    let foobar = foo.filter((item, index) => {<br>
+    return item % 2 ==0;<br>
+});<br>
+console.log(foobar); ---> [30, 40, 50, 100]<br>
 
 3. underscore.js 라이브러리 → script 태그를 사용
 4. JSON 객체 : 자바스크립트 객체를 사용한 데이터 표현 방법
 - 제약 사항
-1.모든 key와 문자열은 더블 퀘터이션("") 사용
-2.숫자, 문자열, boolean 자료형만 사용
+1.모든 key와 문자열은 더블 퀘터이션("") 사용<br>
+2.숫자, 문자열, boolean 자료형만 사용<br>
 - 메소드
-1.JSON.stringify() : 문자열 리턴
-2.JSON.parse() : 객체 리턴
+1.JSON.stringify() : 문자열 리턴<br>
+2.JSON.parse() : 객체 리턴<br>
 
 5. 예외처리
-→ 예외(Exception) : 실행에 문제가 발생하면 자동 중단됨에 의해 발생한 오류
-→ 예외 처리(Exception Handling) : 오류에 대처할 수 있게 하는 것
-- 기본 예외처리
-EX) TypeError : 정의 되지않은(undefined) 자료형을 일반적인 객체/함수 처럼 다룰 시에 발생
-→ 예외처리 : 사전에 해당 데이터가 undefined인지 조건문을 사용
+→ 예외(Exception) : 실행에 문제가 발생하면 자동 중단됨에 의해 발생한 오류<br>
+→ 예외 처리(Exception Handling) : 오류에 대처할 수 있게 하는 것<br>
+- 기본 예외처리<br>
+EX) TypeError : 정의 되지않은(undefined) 자료형을 일반적인 객체/함수 처럼 다룰 시에 발생<br>
+→ 예외처리 : 사전에 해당 데이터가 undefined인지 조건문을 사용<br>
 - try catch finally 구문
-1.try : 예외가 발생할 예상되는 구문 입력
-2.catch : 예외 발생시에 예외처리
-3.finally : 관계없이 무조건 실행(catch구문에서 return값이 있거나 더 이상 수행 불가시 사용)
+1.try : 예외가 발생할 예상되는 구문 입력<br>
+2.catch : 예외 발생시에 예외처리<br>
+3.finally : 관계없이 무조건 실행(catch구문에서 return값이 있거나 더 이상 수행 불가시 사용)<br>
 - 고급 예외처리
-EX) RangeError : 배열 생성시 길이를 음수로 지정할 때 발생
-→ try catch finally 구문 사용
-EX) try {
-const array = new Array[-2000]
-} catch {
-    console.log("예외 발생");
-}finally {
-    console.log("finally 구문 실행");
-}
-- 예외 객체 : Exception = e / EX) e.name, e.message
-- 예외 강제 발생 : throw 키워드 사용 / throw 키워드 뒤에는 문자열 또는 Error 객체 입력
-※ 자세한 예외 출력은 Error 객체 사용(어떤 파일의 몇번째 줄에서 예외 발생했는지 확인가능)
+EX) RangeError : 배열 생성시 길이를 음수로 지정할 때 발생<br>
+→ try catch finally 구문 사용<br>
+EX) try {<br>
+const array = new Array[-2000]<br
+} catch {<br>
+    console.log("예외 발생");<br>
+}finally {<br>
+    console.log("finally 구문 실행");<br>
+}<br>
+- 예외 객체 : Exception = e / EX) e.name, e.message<br>
+- 예외 강제 발생 : throw 키워드 사용 / throw 키워드 뒤에는 문자열 또는 Error 객체 입력<br>
+※ 자세한 예외 출력은 Error 객체 사용(어떤 파일의 몇번째 줄에서 예외 발생했는지 확인가능)<br>
 
 
 ## [05월 04일]
