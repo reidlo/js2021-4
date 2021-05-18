@@ -1,16 +1,17 @@
 # 강준모 [201840103]
 
-##[05월 18일]
+## [05월 18일]
 > [12주차 05/18] 배운 내용 요약 <br>
-1. Node.js - ServerSiding JavaScript Program
+1. <strong>Node.js - ServerSiding JavaScript Program</strong>
 - <strong>전역 변수/함수/객체 : 모든 곳에서 사용할 수 있는 것들</strong><br>
 <ul>문자열 자료형의 전역 변수
 <li>__filename : 현재 실행 중인 코드의 파일 경로를 나타냄</li>
 <li>__dirname : 현재 실행 중인 코드의 폴더 경로를 나타냄</li>
 </ul>
-- <strong>Process 객체 : Node.js는 process 전역 객체를 제공</strong><br> 
+
+2. <strong>process 객체 : Node.js는 process 전역 객체를 제공</strong><br> 
 ※ process 객체는 프로세스 정보를 제공, 제어할 수 있게 하는 객체<br>
-<ul>process 객체의 속성
+<ul><strong>1.process 객체의 속성</strong>
     <li>env : 컴퓨터 환경 정보를 나타냄</li>
     <li>version : Node.js 버전을 나타냄</li>
     <li>versions : Node.js와 종속된 프로그램 버전을 나타냄</li>
@@ -18,11 +19,18 @@
     <li>platform : 플랫폼을 나타냄</li>
 </ul>
 
-<ul>process 객체의 메소드
+<ul><strong>2.process 객체의 메소드</strong>
     <li>exit([exitCode =0]) : 프로그램 종료 </li>
     <li>memoryUsage() : 메모리 사용 정보 객체 리턴</li>
     <li>uptime() : 현재 프로그램이 실행된 시간을 리턴</li>
 </ul>
+
+<ul><strong>3.Node.js의 이벤트 연결 메소드</strong>
+    <li>on(<이벤트 이름>, <이벤트 핸들러>) : 이벤트를 연결</li>
+    <li>process 객체의 이벤트 : exit(프로세스 종료시 발생) / uncaughtException(예외가 일어날 시 발생)<li>
+</ul>
+
+<ul><strong>4.그 외 메소드</strong><br>
 Event: 'exit'<br>
 Event: 'uncaughtException'<br>
 Signal Events<br>
@@ -60,7 +68,66 @@ process.uptime()<br>
 process.hrtime()<br>
 process.on('이벤트 이름', () => {<br>
     함수 기능 <br>
-}<br>
+}</ul><br>
+
+
+3. <strong>os 모듈 사용 : const os = require('os');</strong>
+
+<ul><b>- os모듈의 메소드</b>
+    <li>hostname() : 운영체제의 호스트 이름 리턴</li>
+    <li>type() : 운영체제의 이름을 리턴</li>
+    <li>platform() : 운영체제의 플랫폼을 리턴</li>
+    <li>arch() : 운영체제의 아키텍처를 리턴</li>
+    <li>release() : 운영체제의 버전을 리턴</li>
+    <li>uptime() : 운영체제가 실행된 시간을 리턴</li>
+    <li>loadavg() : 로드 에버리지 정보를 담은 배열 리턴</li>
+    <li>totalmem() : 시스템의 총 메모리를 리턴</li>
+    <li>freemem() : 시스템의 사용 가능한 메모리를 리턴</li>
+    <li>cpus() : CPU의 정보를 담은 객체를 리턴</li>
+    <li>getNetworkInterfaces() : 네트워크 인터페이스의 정보를 담은 배열 리턴</li>
+</ul>
+
+4. <strong>url 모듈 사용 : const url = require('url');</strong>
+
+<ul><b>- url 모듈의 메소드 </b>
+    <li>parse(urlStr[.parseQuerystring=false,slashesDenoteHost=false]) : URL 문자열을 URL 객체로 변환해 리턴</li>
+    <li>format(urlObj) : URL 객체를 URL 문자열로 변환해 리턴</li>
+    <li>resolve(form,to) : 매개변수를 조합하여 완전한 URL 문자열을 생성해 리턴</li>
+</ul>
+
+5. <strong>File System 모듈 : const fs = require('fs');</strong>
+
+<ul><b>- file system의 메소드</b>
+    <li>fs.readFileSync(<파일 이름>) : 동기적으로 파일을 읽어들임</li>
+    <li>fs.readFile(<파일 이름>, <콜백 함수>) : 비동기적으로 파일을 읽어들임</li>
+    <li>fs.writeFileSync(<파일 이름>) : 동기적으로 파일 작성</li>
+    <li>fs.writeFile(<파일 이름>,<문자열>,<콜백 함수>) : 비동기적으로 파일 작성</li>
+</ul>
+
+<ul><b>- 파일 처리와 예외 처리</b>
+    <li>동기 코드 예외 처리 : try catch 구문 사용</li>
+    <li>비동기 코드 예외 처리 : 콜백함수의 첫 번째 매개변수 error 사용</li>
+    <strong> ※ fs.readFileSync()를 사용, 없는 파일을 지정해 강제 예외 발생</strong>
+</ul>
+
+<strong> ※ 동기와 비동기의 실행 결과는 같지만 내부 실행 구조는 다름</strong>
+
+6. <strong>비동기 처리의 장점</strong>
+<ul>
+    <li>웹 서버를 C++로 제작하면 속도는 빠르지만, 개발과 유지보수가 난해</li>
+    <li>프로그래밍 언어 자체는 느리지만 큰 의미가 없다고 판단,개발 속도와 유지보수성이 좋은 프로그래밍 언어를 사용</li>
+    <li>javascript는 C++,JAVA 보다 느리지만 Node.js를 사용하면 손쉽게 비동기 처리구현이 가능해져서 빠른 처리가 가능</li>
+</ul>
+
+7. <strong> Node Package Manager(npm) : npm을 사용, 모듈을 쉽게 설치 및 활용 가능</strong>
+
+<ul><b>- 외부 모듈 종류</b>
+    <li>request : npm install request / const request = require('request');<br><b>※request로 가져온 웹 페이지는 단순한 HTML 문자열이므로 parsing을 통한 데이터의 정보화 필요</b></li>
+    <li>cheerio : npm install cheerio / const cheerio = require('cheerio');<br><b>※가져온 웹 페이지의 특정 위치에서 손쉽게 데이터 추출</b></li>
+    <li>async : npm install async / const async = require('async');<br>
+    <b>※parallel()메소드를 사용하여 다수의 비동기 처리시 발생하는 속칭 '콜백 지옥'을 병렬처리 하여 해결</li>
+</ul>
+
 ## [05월 11일]
 > [11주차 05/11] 배운 내용 요약 <br>
 1. Date 객체
