@@ -3,7 +3,26 @@
 ##[05월 18일]
 > [12주차 05/18] 배운 내용 요약 <br>
 1. Node.js - ServerSiding JavaScript Program
-- <strong>Process 객체</strong><br> 
+- <strong>전역 변수/함수/객체 : 모든 곳에서 사용할 수 있는 것들</strong><br>
+<ul>문자열 자료형의 전역 변수
+<li>__filename : 현재 실행 중인 코드의 파일 경로를 나타냄</li>
+<li>__dirname : 현재 실행 중인 코드의 폴더 경로를 나타냄</li>
+</ul>
+- <strong>Process 객체 : Node.js는 process 전역 객체를 제공</strong><br> 
+※ process 객체는 프로세스 정보를 제공, 제어할 수 있게 하는 객체<br>
+<ul>process 객체의 속성
+    <li>env : 컴퓨터 환경 정보를 나타냄</li>
+    <li>version : Node.js 버전을 나타냄</li>
+    <li>versions : Node.js와 종속된 프로그램 버전을 나타냄</li>
+    <li>arch : 프로세서의 아키텍처를 나타냄</li>
+    <li>platform : 플랫폼을 나타냄</li>
+</ul>
+
+<ul>process 객체의 메소드
+    <li>exit([exitCode =0]) : 프로그램 종료 </li>
+    <li>memoryUsage() : 메모리 사용 정보 객체 리턴</li>
+    <li>uptime() : 현재 프로그램이 실행된 시간을 리턴</li>
+</ul>
 Event: 'exit'<br>
 Event: 'uncaughtException'<br>
 Signal Events<br>
