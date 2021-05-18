@@ -1,5 +1,47 @@
 # 강준모 [201840103]
 
+##[05월 18일]
+> [12주차 05/18] 배운 내용 요약 <br>
+1. Node.js - ServerSiding JavaScript Program
+- <strong>Process 객체</strong><br> 
+Event: 'exit'<br>
+Event: 'uncaughtException'<br>
+Signal Events<br>
+process.stdout<br>
+process.stderr<br>
+process.stdin<br>
+process.argv<br>
+process.execPath<br>
+process.execArgv<br>
+process.abort()<br>
+process.chdir(directory)<br>
+process.cwd()<br>
+process.env<br>
+process.exit([code]) - code == 1이면 강제종료<br>
+process.getgid()<br>
+process.setgid(id)<br>
+process.getuid()<br>
+process.setuid(id)<br>
+process.getgroups()<br>
+process.setgroups(groups)<br>
+process.initgroups(user, extra_group)<br>
+process.version<br>
+process.versions<br>
+process.config<br>
+process.kill(pid, [signal])<br>
+process.pid<br>
+process.title<br>
+process.arch<br>
+process.platform<br>
+process.memoryUsage()<br>
+process.nextTick(callback)<br>
+process.maxTickDepth<br>
+process.umask([mask])<br>
+process.uptime()<br>
+process.hrtime()<br>
+process.on('이벤트 이름', () => {<br>
+    함수 기능 <br>
+}<br>
 ## [05월 11일]
 > [11주차 05/11] 배운 내용 요약 <br>
 1. Date 객체
