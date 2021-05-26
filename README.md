@@ -1,5 +1,90 @@
 # 강준모 [201840103]
 
+## [05월 25일]
+>[13주차 05/25] 배운 내용 요약 <br>
+1. <strong>Express Module - Web Server Module </strong>
+- <strong>설치 및 이용</strong>
+<ul>설치
+<li>terminal에서 npm install express 입력</li>
+<li>express의 description지정을 위한 초기화 작업 : npm init (-y) <- default 값</li>
+※ npm init을 함으로써 express의 모듈 사용을 위해 필요한 package.json파일 생성<br>
+</ul>
+
+2. <strong> 기본 메소드 </strong>
+<ul>
+<li>express() : 서버 애플리케이션 객체 생성</li>
+<li>app.use() : 요청이 왔을 때 실행할 함수 지정</li>
+<li>app.listen() : 서버 실행</li>
+</ul>
+
+3. <strong>페이지 라우팅</strong>
+- <strong>페이지 라우팅(page routing) : client 요청에 적절한 페이지를 제공하는 기술 </strong>
+※ 페이지 라우팅 시 토큰 활용 : ':<토큰 이름>' 형태로 설정 / 토큰은 다른 문자열로 변환 입력 가능, request 객체의 params 속성으로 전달<br>
+<ul>
+<li>get(path,callback) : GET요청 발생시 이벤트 리스너 지정</li>
+<li>post(path,callback) : POST요청 발생시 이벤트 리스너 지정</li>
+<li>put(path,callback) : PUT요청 발생시 이벤트 리스너 지정</li>
+<li>delete(path,callback) : DELETE요청 발생시 이벤트 리스너 지정</li>
+<li>all(path,callback) : 모든 요청 발생시 이벤트 리스너 지정</li>
+</ul>
+
+4. <strong>response 객체</strong>
+<ul>
+<li>send() : 데이터 본문을 제공 <b>-가장 마지막에 실행하는 것이 원칙 / 중복실행 불가<b></li>
+<li>status() : 상태 코드를 제공</li>
+<li>set() : 헤더를 설정</li>
+</ul>
+
+5. <strong>Content-Type</strong>
+- <strong>Server에서 Content-Type 제공 : 웹 브라우저는 헤더를 확인 / 제공된 데이터의 형태를 확인(MIME이라는 문자열로 제공)</strong>
+<ul>
+<li>text/plain : 기본적 텍스트</li>
+<li>text/html : html 데이터를 의미</li>
+<li>text/javascript : js 데이터를 의미</li>
+<li>image/png : png 데이터를 의미</li>
+<li>audio/mpe : MP3 음악 파일을 의미</li>
+<li>video/mpeg : MPEG 비디오 파일을 의미</li>
+<li>application/json : json 데이터를 의미</li>
+<li>multipart/form-data : 입력 양식 데이터를 의미</li>
+<p><b>※ MIME 형식 지정 : type() 메소드 사용</b></p>
+</ul>
+
+6. <strong>HTTP Status Code</strong>
+- <strong>status code : 서버가 클라이언트에 '해당 경로는 이러한 상태'라고 알려주는 용도</strong>
+<ul>
+<li>1XX : 처리중 : 100 Continue</li>
+<li>2XX : 성공 : 200 OK</li>
+<li>3XX : Redirect : 300 Multiple Choices</li>
+<li>4XX : Client Error : 400 Bad Request</li>
+<li>5XX : Server Error : 400 Internal Server Error</li>
+<p><b> ※Status Code 지정 : status() 메소드 사용</b></p>
+</ul>
+
+- <strong> Redirect : 3XX, 특수한 상태 코드 </strong>
+<ul>
+<li>웹 브라우저가 리다이렉트를 확인하면 화면을 출력하지 않음</li>
+<li>응답 헤더에 있는 Location 속성을 확인해서 해당 위치로 이동</li>
+<li>특정 경로로 웹 브라우저를 인도 할 때 사용</li>
+<p><b>※ redirect()메소드를 사용</b></p>
+</ul>
+
+7. <strong>request 객체</strong>
+- <strong> 주소 분석 </strong>
+<ul>
+<li>프로토콜 : 통신에 사용되는 규칙 : HTTP, HTTPS..etc</li>
+<li>호스트 : 애플리케이션 서버의 위치 : (search)naver.com..etc</li>
+<li>URL : 애플리케이션 서버 내부에서 라우트 위치 : search.naver..etc</li>
+<li>요청 매개변수 : 추가적인 정보 : ?...=...&...=...(쿼리 문자열)</li>
+</ul>
+
+8. <strong>미들웨어</strong>
+- <strong>미들웨어 설정 메소드 : use()</strong>
+
+- <strong> 정적 파일 제공 - 웹 페이지에서 변경되지 않는 요소(이미지, 음악, js파일, css파일 등)를 쉽게 제공<br>→ app.use(express.static('파일경로'))</strong>
+- <strong> morgan 미들웨어 - 사용할 수 있는 외부 모듈 확인 </strong>
+
+
+
 ## [05월 18일]
 > [12주차 05/18] 배운 내용 요약 <br>
 1. <strong>Node.js - ServerSiding JavaScript Program</strong>
