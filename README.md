@@ -95,9 +95,6 @@
 <p><b>※body 객체 : 대용량 문자열 등을 전송할때 사용 / 주소에 데이터 기록 불가 / 새로고침이나 즐겨찾기 기능 사용 불가</b><p>
 </strong>
 
-
-
-
 ## [05월 18일]
 > [12주차 05/18] 배운 내용 요약 <br>
 1. <strong>Node.js - ServerSiding JavaScript Program</strong>
