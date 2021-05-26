@@ -18,7 +18,7 @@
 </ul>
 
 3. <strong>페이지 라우팅</strong>
-- <strong>페이지 라우팅(page routing) : client 요청에 적절한 페이지를 제공하는 기술 </strong>
+- <strong>페이지 라우팅(page routing) : client 요청에 적절한 페이지를 제공하는 기술 </strong><br>
 ※ 페이지 라우팅 시 토큰 활용 : ':<토큰 이름>' 형태로 설정 / 토큰은 다른 문자열로 변환 입력 가능, request 객체의 params 속성으로 전달<br>
 <ul>
 <li>get(path,callback) : GET요청 발생시 이벤트 리스너 지정</li>
@@ -36,7 +36,7 @@
 </ul>
 
 5. <strong>Content-Type</strong>
-- <strong>Server에서 Content-Type 제공 : 웹 브라우저는 헤더를 확인 / 제공된 데이터의 형태를 확인(MIME이라는 문자열로 제공)</strong>
+- <strong>Server에서 Content-Type 제공 : 웹 브라우저는 헤더를 확인 / 제공된 데이터의 형태를 확인<br>(MIME이라는 문자열로 제공)</strong>
 <ul>
 <li>text/plain : 기본적 텍스트</li>
 <li>text/html : html 데이터를 의미</li>
@@ -81,7 +81,20 @@
 - <strong>미들웨어 설정 메소드 : use()</strong>
 
 - <strong> 정적 파일 제공 - 웹 페이지에서 변경되지 않는 요소(이미지, 음악, js파일, css파일 등)를 쉽게 제공<br>→ app.use(express.static('파일경로'))</strong>
-- <strong> morgan 미들웨어 - 사용할 수 있는 외부 모듈 확인 </strong>
+- <strong> morgan 미들웨어 - 로그 기록을 남기는 모듈(함수를 효과적으로 배열)</strong>
+- <strong> body-parser 미들웨어 - request 본문을 분석<br><b>※Client에서 Server로 데이터 전송 시 URL에 요청 매개변수를 입력하면 정보가 노출되는 단점<br> request본문을 사용하면 주소에 기록을 남기지않고 데이터 전달 가능<br>
+※MIME 형식<br>
+1.application/x-www-form-urlencoded : 웹 브라우저에서 입력 양식을 POST,PUT,DELETE방식 등으로 전달 시 사용하는 기본적인 요청 방식<br>
+2.application/json : json데이터로 요청하는 방식<br>
+3.multipart/form-data : 대용량 파일을 전송할 때 사용하는 요청 방식<br>
+</strong>
+
+- <strong> 속성 정리 : Client가 Server로 데이터를 전송하는 3가지 방법
+<p><b>※params 객체 : URL의 토큰. 보기가 간편</b><p>
+<p><b>※query 객체 : URL의 요청 매개 변수. 토큰보다 많은 데이터를 전달 가능 / 주소로 어떤 데이터가 송수신되는지 확인가능</b><p>
+<p><b>※body 객체 : 대용량 문자열 등을 전송할때 사용 / 주소에 데이터 기록 불가 / 새로고침이나 즐겨찾기 기능 사용 불가</b><p>
+</strong>
+
 
 
 
