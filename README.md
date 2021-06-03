@@ -1,5 +1,176 @@
 # 강준모 [201840103]
 
+## [06월 01일]
+>[14주차 06/01] 배운 내용 요약 <br>
+1. <strong>Web Browser에서의 JS </strong>
+- <strong>코드 사용시 차이점(ES6 이후 추가된 코드 사용 불가)</strong>
+<ul>
+<li>변수/상수 선언시 var만 사용(let,const 사용 불가)</li>
+<li>템플릿 문자열 - `(Backtit)사용 불가</li>
+<li>화살표 함수 사용 불가</li>
+<li>for of 반복문 사용 불가</li>
+</ul>
+
+2. <strong>window 객체</strong>
+- <strong>새로운 화면을 열거나 웹 브라우저의 크기를 변경하는 등의 일</strong>
+- <strong>대표적으로 경고 출력을 하는 경고창과 입력을 하는 프롬프트를 제공함</strong>
+<ul>
+<li>alert(메시지) : 경고창을 출력</li>
+<li>prompt(<메시지>,<임시 글자>) : 프롬프트 출력</li>
+</ul>
+
+3. <strong>screen 객체</strong>
+- <strong>screen 객체의 속성</strong>
+<ul>
+<li>width : 화면의 너비</li>
+<li>height : 화면의 높이</li>
+<li>availWidth : 실제 회면에서 사용 가능한 너비</li>
+<li>availHeight : 실제 화면에서 사용 가능한 높이</li>
+<li>colorDepth : 사용 가능한 색상 수</li>
+<li>pixelDepth : 한 픽셀당 비트 수</li>
+</ul>
+
+4. <strong>location 객체와 history 객체</strong>
+- <strong>loaction 객체의 속성</strong>
+<ul>
+<li>href : 문서의 URL 주소</li>
+<li>host : 호스트 이름과 포트 번호</li>
+<li>hostname : 호스트 이름</li>
+<li>port : 포트 번호</li>
+<li>pathname : 디렉터리 경로</li>
+<li>hash : 앵커 이름</li>
+<li>search : 요청 매개 변수</li>
+<li>protocol : 프로토콜 종류</li>
+</ul>
+
+- <strong>location 메소드</strong>
+<ul>
+<li>assign(<링크>) : 매개변수로 전달한 위치로 이동</li>
+<li>reload() : 새로고침</li>
+<li>replace() : 매개변수로 전달한 위치로 이동(뒤로가기 불가)</li>
+</ul>
+
+- <strong>history 객체의 메소드 </strong>
+<ul>
+<li>forward() : 앞으로 이동</li>
+<li>back() : 뒤로 이동</li>
+</ul>
+
+6. <strong>navigator 객체</strong>
+- <strong>웹 페이지를 실행하는 웹 브라우저 정보가 들어있음 </strong>
+- <strong>사용자의 웹 브라우저, 운영체제를 구분할 수 있음 </strong>
+<ul>
+<li>appCodeName : 웹 브라우저 코드 이름</li>
+<li>appName : 웹 브라우저 이름</li>
+<li>appVersion : 웹 브라우저의 버전</li>
+<li>platform : 사용 중인 운영체제의 시스템 변경</li>
+<li>userAgent : 웹 브라우저의 전체적인 정보</li>
+</ul>
+
+7. <strong>문서 객체 모델</strong>
+- <strong>문서 객체 : HTML 태그를 js에서 사용할 수 있는 객체로 만들음</strong>
+- <strong>노드 : 각 요소</strong>
+<ul>
+<li>요소 노드 : HTML의 태그처럼 요소를 생성하는 노드</li>
+<li>텍스트 노드 : 화면에 출력되는 문자열</li>
+</ul>
+
+- <strong>정적 문서 객체 생성과 동적 문저 객체 생성의 차이</strong>
+<ul>
+<li>'정적 문서 객체 생성' : 웹 페이지 최초 실행 시 HTML페이지에 있는 태그를 읽으면서 생성</li>
+<li>'동적 문서 객체 생성' : js를 사용해서 프로그램 실행 중에 문서 객체를 생성</li>
+</ul>
+
+8. <strong>문서 객체 선택</strong>
+- <strong>HTML 태그를 js에서 문서 객체로 변환</strong>
+- <strong>객체 선택 시 js로 실행 중에 내부 글자 및 스타일 변경 가능</strong>
+- <strong>문서 객체 선택 메소드 </strong>
+<ul>
+<li>document.getElementById(아이디) : 아이디를 사용해서 객체 선택</li>
+<li>document.getquerySelector(선택자) : 선택자를 사용해서 객체 선택</li>
+</ul>
+
+9. <strong>이벤트</strong>
+- <strong>어떤 현상이 프로그램에 영향을 미치는 것</strong>
+- <strong>이벤트 관련 용어</strong>
+<ul>
+<li> window.onload = function (){};</li>
+<li>이벤트 속성 : onload</li>
+<li>이벤트 이름, 이벤트 타입 : load</li>
+<li>이벤트 리스너, 이벤트 핸들러 : 이벤트 속성에 넣는 함수</li>
+<li>이벤트 모델 : 문서 객체에 이벤트를 연결하는 방법</li>
+</ul>
+
+10. <strong>jQuery 라이브러리</strong>
+- <strong>jQuery는 $함수 활용</strong>
+- <strong>$함수의 매개 변수에서는 문서 객체, CSS, HTMl 형식의 문자열 삽입 / $(<매개변수>).메소드(<매개변수>, <매개변수>) </strong>
+- <strong>window.jQuery = window.$ = jQuery;</strong>
+
+11. <strong>jQuery 문서 객체 선택</strong>
+- <strong>CSS선택자를 이용 객체 선택</strong>
+<ul>
+<li>parent() : 부모 태그 선택</li>
+<li>find() : 자식 태그 선택</li>
+</ul>
+
+- <strong>문서 객체 개별 조작</strong>
+<ul>
+<li>length : 선택된 문서 객체의 수를 구함</li>
+<li>get() : 선택한 문서 객체 중 하나를 선택</li>
+<li>each() : 선택한 문서 객체에 반복을 적용</li>
+<li>text() : html 태그 내부에 문자를 조작</li>
+<li>html() : html 태그 내부에 문자를 조작(html 태그 인식)</li>
+<p><b>※ 선택자로 여러 개의 문서 객체를 선택할 때 text() 메소드는 모든 문서 객체내부의 문자를 출력<br> html()메소드는 첫 번째 문서 객체 내부의 문자를 출력</b></p>
+<li>css() : 스타일 조작</li>
+<li>attr() : 속성 조작</li>
+</ul>
+
+- <strong>이벤트</strong>
+<ul>
+<li>on() : 이벤트 연결</li>
+<li>off() : 이벤트 제거</li>
+</ul>
+
+- <strong>키보드 이벤트</strong>
+<ul>
+<li>keydown() : 키보드 키를 눌럿을 때</li>
+<li>keypress() : 키가 입력되었을 때</li>
+<li>keyup() : 키보드 키를 떼었을 때</li>
+</ul>
+
+- <strong>마우스 이벤트</strong>
+<ul>
+<li>click() : 마우스를 클릭했을 때</li>
+<li>dbclick() : 마우스를 더블 클릭했을 때</li>
+<li>mousedown() : 마우스 버튼을 눌렀을 때</li>
+<li>mouseenter() : 마우스 커서가 해당 태그로 들어갔을 때</li>
+<li>mouseleave() : 마우스 커서가 해당 태그에서 나갔을 때</li>
+<li>mousemove() : 마우스가 움직일 때</li>
+<li>mouseup() : 마우스 버튼을 뗄 때</li>
+</ul>
+
+- <strong>입력 양식 이벤트</strong>
+<ul>
+<li>blur() : 입력 양식에 값 입력을 종료할 떄</li>
+<li>change() : 입력 양식 값이 변경될 때</li>
+<li>focus() : 입력 양식에 값 입력을 시작할 때</li>
+<li>select() : type 속성이 select인 입력 양식의 목록에서 값을 선택할 때</li>
+<li>submit() : type 속성이 submit인 입력 양식을 클릭했을 때</li>
+</ul>
+
+- <strong>웹 브라우저 이벤트</strong>
+<ul>
+<li>resize() : 웹 브라우저 크기를 변경할 때</li>
+<li>scroll() : 웹 브라우저를 스크롤할 때</li>
+</ul>
+
+12. <strong>애니메이션</strong>
+- <strong> animate() 메소드 사용 </strong>
+- <strong>스타일에 적용 / 숫자를 적용할 수 있는 모든 속성에 메소드 사용 가능</strong>
+- <strong> $(<선택자>).animate(<속성>, <시간>, <콜백 함수>)
+
+
+
 ## [05월 25일]
 >[13주차 05/25] 배운 내용 요약 <br>
 1. <strong>Express Module - Web Server Module </strong>
